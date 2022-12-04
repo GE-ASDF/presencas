@@ -7,7 +7,7 @@ function conectar(Array $accessBd){
 
         $servidor = $accessBd["servidor"];
         $banco = $accessBd["banco"];
-        $porta = $accessBd["porta"] ? $accessBd["senha"]:'3306';
+        $porta = $accessBd["porta"] ? $accessBd["porta"]:'3306';
         $usuario = $accessBd["usuario"];
         $senha = $accessBd["senha"];
         
@@ -29,7 +29,7 @@ function conectar(Array $accessBd){
             }
         
         }else{
-            return $pdo;
+            return $pdo;    
         }
 
     }else{

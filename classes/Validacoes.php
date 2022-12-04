@@ -11,7 +11,11 @@ class Validacoes{
             foreach($data as $key => $value){
                 if(strpos($value, "|")){
                     $explodedBar = explode("|", $value);
-                    return $explodedBar;
+                    foreach($explodedBar as $func){
+                        if(method_exists(new Validacoes, $func)){
+                            $validado[$key] = (new Validacoes)->$func($key);
+                        }
+                    }
                 }else{
                     if(method_exists(new Validacoes, $value)){
                         $validado[$key] = (new Validacoes)->$value($key);
@@ -44,15 +48,41 @@ class Validacoes{
                 }
                 return $newDados;
             }else{
-                return $dados;
+                $sanitizado = strip_tags($dados);
+                return $sanitizado;
             }
 
         }elseif($_GET){
 
         }else{
-            return setMessage("Nenhum verbo HTTP foi passado", "verboerrado");
+            setMessage("Nenhum verbo HTTP foi passado", "verboerrado");
         }
 
+    }
+
+    private function int(string $key){
+        if($_POST){
+            // $dado = filter_var(self::getPostData($key), FILTER_SANITIZE_STRING);
+            $dados = self::getPostData($key);
+            if(is_array($dados)){
+                $newDados = array();
+                foreach($dados as $chave => $data){
+                    $dado = filter_var($data, FILTER_SANITIZE_NUMBER_INT);
+                    $newDados[] = [
+                        $chave => $dado,
+                    ];
+                }
+                return $newDados;
+            }else{
+                $sanitizado = filter_var($dados, FILTER_SANITIZE_NUMBER_INT);
+                return $sanitizado;
+            }
+
+        }elseif($_GET){
+
+        }else{
+            setMessage("Nenhum verbo HTTP foi passado", "verboerrado");
+        }
     }
 
     private function getPostData(string $key){

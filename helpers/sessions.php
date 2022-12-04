@@ -12,7 +12,7 @@ function setMessage($message, $index, $type = 'danger'){
         $_SESSION[$index] = "
         <span class='alert w-100 alert-{$type} d-flex justify-content-between align-items-center'> 
             <span class='justify-self-center align-self-center'>{$message}</span>
-            <span class='btn btn-danger justify-content-end align-items-end close-message'>
+            <span class='btn m-1 btn-danger justify-content-end align-items-end close-message'>
             X
             </span>
         </span>

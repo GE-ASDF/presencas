@@ -8,6 +8,7 @@
         <div class="alertas m-2">
             <?php echo getMessage("verboerrado"); ?>
             <?php echo getMessage("verbocerto"); ?>
+            <?php echo getMessage("message"); ?>
         </div> 
     <?php ?> 
     <div class="form-frequency d-flex justify-content-center align-items-center flex-column">
@@ -96,12 +97,12 @@
             <div class="w-75">
                 <div class="card bg-dark">
                     <div class="d-flex">
-                        <input name="DataPresenca" readonly autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="DataPresenca" aria-describedby="DataPresenca">
-                        <input name="DiaSemana" readonly autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="DiaSemana" aria-describedby="DiaSemana">
+                        <input name="DataPresenca" readonly  type="hidden" class="m-2 form-control p-2 fs-5" id="DataPresenca" aria-describedby="DataPresenca">
+                        <input name="DiaSemana" readonly  type="hidden" class="m-2 form-control p-2 fs-5" id="DiaSemana" aria-describedby="DiaSemana">
                     </div>
                     <div class="d-flex">
-                        <input name="Computador" readonly value="<?php echo gethostbyaddr($_SERVER["REMOTE_ADDR"]); ?>" autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="Computador" aria-describedby="Computador">
-                        <input name="IpComputador" value="<?php echo $_SERVER["REMOTE_ADDR"]; ?>" autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="IpComputador" aria-describedby="IpComputador">
+                        <input name="Computador" readonly value="<?php echo gethostbyaddr($_SERVER["REMOTE_ADDR"]); ?>" type="hidden" class="m-2 form-control p-2 fs-5" id="Computador" aria-describedby="Computador">
+                        <input name="IpComputador" readonly value="<?php echo $_SERVER["REMOTE_ADDR"]; ?>" type="hidden" class="m-2 form-control p-2 fs-5" id="IpComputador" aria-describedby="IpComputador">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-dark mt-3 align-self-start">Registrar</button>

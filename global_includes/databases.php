@@ -22,11 +22,11 @@ function ouro(){
 
 function presencas(){
     return [
-        "servidor" => "localhost",
+        "servidor" => "servidorouro",
         "banco" => "bd_presencas",
         "porta" => "3306",
-        "usuario" => "root",
-        "senha" => ""
+        "usuario" => "prepara2",
+        "senha" => "prepara"
     ];
 }
 

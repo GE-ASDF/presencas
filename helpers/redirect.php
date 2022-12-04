@@ -1,9 +1,9 @@
 <?php
 
 function redirect($page){
-    return header("Location:{$page}");
+    header("Location:{$page}");
 }
 
 function refresh($time, $url){
-    return header("Refresh: {$time}; url={$url}");
+    header("Refresh: {$time}; url={$url}");
 }
