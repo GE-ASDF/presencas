@@ -39,54 +39,54 @@
                         se você fica de 08h às 09h, você deverá marcar somente o horário de <strong>08:00 às 09:00</strong>.
                     </p>
                 </div>
-                <div class="fs-5 d-flex flex-wrap justify-content-center align-items-center ">
+                <div id="checkboxes" class="fs-5">
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="oito" name="HoraPresenca[]" value="08:00">
-                        <label class="form-check-label m-2" for="oito">08:00 às 09:00</label>
+                        <label class="form-check-label m-1" for="oito">08:00 às 09:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="nove" name="HoraPresenca[]" value="09:00">
-                        <label class="form-check-label m-2" for="nove">09:00 às 10:00</label>
+                        <label class="form-check-label m-1" for="nove">09:00 às 10:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="dez" name="HoraPresenca[]" value="10:00">
-                        <label class="form-check-label m-2" for="dez">10:00 às 11:00</label>
+                        <label class="form-check-label m-1" for="dez">10:00 às 11:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="onze" name="HoraPresenca[]" value="11:00">
-                        <label class="form-check-label m-2" for="onze">11:00 às 12:00</label>
+                        <label class="form-check-label m-1" for="onze">11:00 às 12:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="doze" name="HoraPresenca[]" value="12:00">
-                        <label class="form-check-label m-2" for="doze">12:00 às 13:00</label>
+                        <label class="form-check-label m-1" for="doze">12:00 às 13:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="treze" name="HoraPresenca[]" value="13:00">
-                        <label class="form-check-label m-2" for="treze">13:00 às 14:00</label>
+                        <label class="form-check-label m-1" for="treze">13:00 às 14:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="catorze" name="HoraPresenca[]" value="14:00">
-                        <label class="form-check-label m-2" for="catorze">14:00 às 15:00</label>
+                        <label class="form-check-label m-1" for="catorze">14:00 às 15:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="quinze" name="HoraPresenca[]" value="15:00">
-                        <label class="form-check-label m-2" for="quinze">15:00 às 16:00</label>
+                        <label class="form-check-label m-1" for="quinze">15:00 às 16:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="dezesseis" name="HoraPresenca[]" value="16:00">
-                        <label class="form-check-label m-2" for="dezesseis">16:00 às 17:00</label>
+                        <label class="form-check-label m-1" for="dezesseis">16:00 às 17:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="dezessete" name="HoraPresenca[]" value="17:00">
-                        <label class="form-check-label m-2" for="dezessete">17:00 às 18:00</label>
+                        <label class="form-check-label m-1" for="dezessete">17:00 às 18:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="dezoito" name="HoraPresenca[]" value="18:00">
-                        <label class="form-check-label m-2" for="dezoito">18:00 às 19:00</label>
+                        <label class="form-check-label m-1" for="dezoito">18:00 às 19:00</label>
                     </div>
                     <div class="form-check d-flex justify-content-center align-items-center">
                         <input type="checkbox" class="form-check-input" id="dezenove" name="HoraPresenca[]" value="19:00">
-                        <label class="form-check-label m-2" for="dezenove">19:00 às 20:00</label>
+                        <label class="form-check-label m-1" for="dezenove">19:00 às 20:00</label>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
@@ -96,11 +96,11 @@
             <div class="w-75">
                 <div class="card bg-dark">
                     <div class="d-flex">
-                        <input name="DataPresenca" readonly autofocus type="text" class="m-2 form-control p-2 fs-5" id="DataPresenca" aria-describedby="DataPresenca">
-                        <input name="DiaSemana" readonly autofocus type="text" class="m-2 form-control p-2 fs-5" id="DiaSemana" aria-describedby="DiaSemana">
+                        <input name="DataPresenca" readonly autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="DataPresenca" aria-describedby="DataPresenca">
+                        <input name="DiaSemana" readonly autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="DiaSemana" aria-describedby="DiaSemana">
                     </div>
                     <div class="d-flex">
-                        <input name="Computador" readonly value="<?php echo gethostbyaddr($_SERVER["REMOTE_ADDR"]); ?>" autofocus type="text" class="m-2 form-control p-2 fs-5" id="Computador" aria-describedby="Computador">
+                        <input name="Computador" readonly value="<?php echo gethostbyaddr($_SERVER["REMOTE_ADDR"]); ?>" autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="Computador" aria-describedby="Computador">
                         <input name="IpComputador" value="<?php echo $_SERVER["REMOTE_ADDR"]; ?>" autofocus type="hidden" class="m-2 form-control p-2 fs-5" id="IpComputador" aria-describedby="IpComputador">
                     </div>
                 </div>

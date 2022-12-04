@@ -58,7 +58,7 @@ class Validacoes{
     private function getPostData(string $key){
         $newData = isset($_POST[$key]) ? $_POST[$key]:false;
         if(!$newData){
-            setMessage("O campo {$key} é obrigatório.", $key);
+            setMessage("O campo é obrigatório.", $key);
             return;
         }
         return $newData;
@@ -67,7 +67,7 @@ class Validacoes{
     private function getGetData(string $key){
         $newData = isset($_GET[$key]) ? $_GET[$key]:false;
         if(!$newData){
-            setMessage("O campo {$key} é obrigatório.", $key);
+            setMessage("O campo é obrigatório.", $key);
             return;
         }
         return $newData;
