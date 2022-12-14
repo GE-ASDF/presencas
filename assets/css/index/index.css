@@ -1,0 +1,107 @@
+.an-title{
+    font-size: 4rem;
+    color: #00004F;
+    position: relative;
+    width: max-content;
+}
+h1.an-title::after{
+    content: "";
+    display: block;
+    width: 75px;
+    height: 10px;
+    background-color: #D9DC3B;
+    position: absolute;
+    left: 0;
+}
+#main-index .principal{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+.an-input{
+    font-size: 24px;
+    border:none;
+    border-bottom: 2px solid #3D1365;
+    border-radius: 0%;
+    background-color: #E7D8E9;
+    padding:14px;
+    text-transform: uppercase;
+}
+.an-card-header{
+    background-color:#E6E1EF;
+    color: #00004F;
+}
+
+#instrucoes{
+    background: linear-gradient(to top, #232323, #321365);
+}
+#instrucoes h2{
+    width: max-content;
+    position: relative;
+    font-size: 2rem;
+}
+#instrucoes h2::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 10px;
+    background-color: #D9DC3B;
+    position: absolute;
+    right: 0;
+}
+.text{
+    position: relative;
+}
+.text::before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 35px;
+    background-color: #D9DC3B;
+    position: absolute;
+    left: -10px;
+    top:7px;
+}
+.an-btn{
+    background-color: #481658;
+}
+.an-detalhe{
+    background: linear-gradient(to top, #232323, #321365);
+}
+
+@media (max-width:1200px){
+    #main-index .principal{
+        grid-template-columns: 1fr;
+    }
+   .an-title{
+        font-size: 2rem;
+    }
+    label.an-title{
+        font-size: 1rem !important;
+    }
+    #instrucoes h2{
+        font-size: 1rem;
+    }
+    [name="CodigoContrato"]{
+        font-size: 14px;
+    }
+    .an-detalhe{
+        display: none;
+    }
+}
+
+@media (max-width:1024px){
+    #instrucoes h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:990px){
+    #checkboxes label{
+        font-size: 14px;
+    }
+
+    #main-index .principal{
+        grid-template-columns: 1fr;
+    }
+}

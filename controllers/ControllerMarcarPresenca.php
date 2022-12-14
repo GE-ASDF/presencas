@@ -22,8 +22,9 @@ if($_POST){
         "IpComputador" => "string"
     ];
 
+
     $validar = $validacao->Validate($data);
-    
+  
     if($validar){
 
         $toFindUser = [
@@ -32,6 +33,7 @@ if($_POST){
         
        //
         $findAluno = (new Verificacoes)->verificaPrepara($toFindUser);
+      
         if($findAluno){
             foreach($validar["HoraPresenca"] as $key => $HoraPresenca){
 
@@ -57,14 +59,14 @@ if($_POST){
 
                     if($insert){
                         setMessage("Sucesso! A sua presença foi confirmada e você já pode começar a sua aula. Minimize o navegador e bom curso.", "message", "success");
-                        redirect("/presencas");
+                        echo 1;
                     }else{
                         setMessage("Falha! Houve erros na hora de marcar a sua presença. Peça ao(a) educador(a) que a faça manualmente. Obrigado e boa aula!", "message");
-                        redirect("/presencas");
+                        echo 2;
                     }
                 }else{
                     setMessage("A sua presença já foi confirmada.", "message", "primary");
-                    redirect("/presencas");
+                    echo 3;
                 }
             }
         
@@ -95,27 +97,31 @@ if($_POST){
     
                         if($insert){
                             setMessage("Sucesso! A sua presença foi confirmada e você já pode começar a sua aula. Minimize o navegador e bom curso.", "message", "success");
-                            redirect("/presencas");
+                            echo 1;
+                    
                         }else{
                             setMessage("Falha! Houve erros na hora de marcar a sua presença. Peça ao(a) educador(a) que a faça manualmente. Obrigado e boa aula!", "message");
-                            redirect("/presencas");
+                            echo 2;
                         }
                     }else{
                         setMessage("A sua presença já foi confirmada e você já pode começar a sua aula. Minimize o navegador e bom curso.", "message", "primary");
-                        redirect("/presencas");
+                        echo 3;
+                
                     }
                 }
             }else{
                 setMessage("A presença não foi confirmada, pois o usuário digitado não foi encontrado. Tente novamente!", "message");
-                redirect("/presencas");
+                echo 2;
+        
             }
         }
     }else{
-        redirect("/presencas");
+
+        echo 2;
     }
     
     
 }else{
     setMessage("O método de envio deve ser POST", "verboerrado");
-    redirect("/presencas");
+    echo 2;
 }

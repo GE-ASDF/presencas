@@ -2,9 +2,9 @@
 
 function prepara(){
     return [
-        "servidor" => "servidorescola",
+        "servidor" => "localhost",
         "banco" => "preparaadm",
-        "porta" => "3307",
+        "porta" => "3306",
         "usuario" => "prepcurso",
         "senha" => "ke7@ch%"
 ];
@@ -12,7 +12,7 @@ function prepara(){
 
 function ouro(){
     return [
-        "servidor" => "servidorouro",
+        "servidor" => "localhost",
         "banco" => "ouromoderno",
         "porta" => "3306",
         "usuario" => "prepara2",
@@ -22,7 +22,7 @@ function ouro(){
 
 function presencas(){
     return [
-        "servidor" => "servidorouro",
+        "servidor" => "localhost",
         "banco" => "bd_presencas",
         "porta" => "3306",
         "usuario" => "prepara2",

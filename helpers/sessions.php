@@ -10,11 +10,10 @@ function setMessage($message, $index, $type = 'danger'){
 
     if(!isset($_SESSION[$index])){
         $_SESSION[$index] = "
-        <span class='alert w-100 alert-{$type} d-flex justify-content-between align-items-center'> 
-            <span class='justify-self-center align-self-center'>{$message}</span>
-            <span class='btn m-1 btn-danger justify-content-end align-items-end close-message'>
-            X
-            </span>
+        <span class='alert w-100 justify-content-between d-flex alert-{$type}'>
+            <span id='text-message'>{$message}</span>
+                <span style='cursor: pointer;' class='btn-close d-block'>
+                </span>
         </span>
         ";
 
